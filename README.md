@@ -3,6 +3,7 @@
 # ⚡ TWT Saves — Twitter (X) Video Downloader
 
 [![Official Site](https://img.shields.io/badge/Official%20Site-twtsaves.com-0284c7.svg?style=for-the-badge&logo=google-chrome&logoColor=white)](https://twtsaves.com)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-jod--prime%2Ftwtsaves.com-181717.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jod-prime/twtsaves.com)
 [![Resolution](https://img.shields.io/badge/Max%20Resolution-1080p%20Full%20HD-38bdf8.svg?style=for-the-badge)](https://twtsaves.com)
 [![Watermark](https://img.shields.io/badge/Watermark-Zero%20%2F%20None-10b981.svg?style=for-the-badge)](https://twtsaves.com)
 [![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20Android%20%7C%20PC-6366f1.svg?style=for-the-badge)](https://twtsaves.com)
