@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TWT Saves – Twitter (X) Video Downloader | Official Public Client</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="TWT Saves – Twitter (X) Video Downloader | Official Public Client">
+  <meta name="description" content="Download public Twitter and X videos in 1080p Full HD MP4 without watermarks. Free online Twitter video saver, Chrome Extension, and Apple Siri Shortcut.">
+  <meta name="theme-color" content="#030712">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://twtsaves.com/">
+  <meta property="og:title" content="TWT Saves – Twitter (X) Video Downloader">
+  <meta property="og:description" content="Download public Twitter and X videos in 1080p Full HD MP4 without watermarks. 100% Free, iOS Safari Camera Roll & Android supported.">
+  <meta property="og:image" content="images/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://twtsaves.com/">
+  <meta property="twitter:title" content="TWT Saves – Twitter (X) Video Downloader">
+  <meta property="twitter:description" content="Download public Twitter and X videos in 1080p Full HD MP4 without watermarks. Free online Twitter video saver.">
+  <meta property="twitter:image" content="images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient Glow & Grid -->
+  <div class="ambient-bg"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <a href="https://twtsaves.com" class="brand" target="_blank" rel="noopener">
+        <div class="brand-icon">T</div>
+        <div class="brand-text">
+          <span class="twt">TWT</span>
+          <span class="saves">Saves</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#downloads" class="nav-link">Downloads</a>
+        <a href="#trick" class="nav-link">URL Trick</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="https://twtsaves.com" class="btn-pill btn-pill-live" target="_blank" rel="noopener">
+          <span class="pulse-dot"></span>
+          <span>Official Site (twtsaves.com)</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <div class="badge-official">
+        ⚡ Official GitHub Client • High-Speed X Video Saver
+      </div>
+      <h1>Twitter &amp; X Video Downloader</h1>
+      <p class="lead">
+        Download public Twitter (X) videos, looping GIFs, and audio in 1080p Full HD MP4 without watermarks. Fast, secure, and 100% free online.
+      </p>
+
+      <!-- Interactive Downloader Form -->
+      <div class="downloader-box">
+        <form id="download-form">
+          <div class="input-group">
+            <svg class="input-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            <input 
+              type="text" 
+              id="tweet-url" 
+              placeholder="Paste Twitter or X post link (e.g. https://x.com/username/status/...)" 
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button type="button" id="btn-paste" class="btn-paste" title="Paste link from clipboard">
+              <svg style="width:16px;height:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+              <span>Paste</span>
+            </button>
+            <button type="submit" id="btn-download" class="btn-download">
+              <svg style="width:18px;height:18px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              <span>Download</span>
+            </button>
+          </div>
+        </form>
+
+        <div id="status-msg" class="status-message"></div>
+
+        <div class="quick-tags">
+          <span class="tag-pill">✨ No Watermark</span>
+          <span class="tag-pill">⚡ 1080p Full HD</span>
+          <span class="tag-pill">📱 iOS Safari Camera Roll</span>
+          <span class="tag-pill">🎵 Spaces &amp; Audio to MP3</span>
+          <span class="tag-pill">🔒 Zero Sign-up Required</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Downloads Section (Extension & iOS Shortcut) -->
+    <section id="downloads" class="downloads-section">
+      <h2 class="section-title">Official Tools &amp; Downloads</h2>
+      <p class="section-desc">
+        Equip your devices with the fastest tools to extract and archive Twitter media with zero clicks.
+      </p>
+
+      <div class="cards-grid">
+        <!-- Chrome Extension Card -->
+        <div class="download-card">
+          <div class="card-header">
+            <div class="card-icon icon-chrome">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+            <div class="card-title-group">
+              <h3>Chrome &amp; Brave Extension</h3>
+              <span class="card-badge">v2.0 • 1-Click Inline Button</span>
+            </div>
+          </div>
+          <p>
+            Adds an instant <strong>&ldquo;Download HD&rdquo;</strong> button directly under every video in your Twitter &amp; X feed. Zero copying or pasting needed.
+          </p>
+          <a href="downloads/twt-saves-extension.zip" download class="btn-card-download">
+            <svg style="width:18px;height:18px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>Download Extension (.zip)</span>
+          </a>
+        </div>
+
+        <!-- Apple Siri Shortcut Card -->
+        <div class="download-card">
+          <div class="card-header">
+            <div class="card-icon icon-apple">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.36c.64-.78 1.08-1.86.96-2.95-1 .04-2.17.65-2.85 1.44-.59.68-1.12 1.78-.98 2.84 1.11.09 2.22-.55 2.87-1.33z"/>
+              </svg>
+            </div>
+            <div class="card-title-group">
+              <h3>Apple iOS Siri Shortcut</h3>
+              <span class="card-badge">iOS 16+ • Camera Roll Direct</span>
+            </div>
+          </div>
+          <p>
+            Native iOS Share Sheet shortcut for iPhone &amp; iPad. Share any tweet from the X app and tap &ldquo;TWT Saves&rdquo; to save 1080p video directly into Apple Photos.
+          </p>
+          <a href="downloads/TWT-Saves.shortcut" download class="btn-card-download">
+            <svg style="width:18px;height:18px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>Download Shortcut (.shortcut)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The URL Prefix Trick Section -->
+    <section id="trick" class="trick-box">
+      <div class="trick-content">
+        <h3>The &ldquo;TWT&rdquo; URL Prefix Trick</h3>
+        <p>
+          Save any video without leaving Twitter or copying links. Simply prepend 
+          <strong style="color:var(--accent-cyan)">twtsaves.com/</strong> in front of any tweet URL in your browser address bar and press Enter!
+        </p>
+        <div class="mock-address-bar">
+          <svg style="width:16px;height:16px;color:#64748b;flex-shrink:0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          <span class="prefix-highlight">twtsaves.com/</span>
+          <span style="color:#94a3b8">https://x.com/sports/status/1838848483</span>
+        </div>
+      </div>
+      <div>
+        <button type="button" id="btn-copy-trick" class="btn-paste" style="background:rgba(14,165,233,0.15);border-color:var(--accent-cyan);color:var(--accent-cyan)">
+          <span>Copy &ldquo;twtsaves.com/&rdquo;</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features">
+      <h2 class="section-title">Why Use TWT Saves?</h2>
+      <p class="section-desc">Engineered for maximum speed, crystal-clear 1080p extraction, and complete user privacy.</p>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <h4>⚡ 1080p Full HD &amp; 4K</h4>
+          <p>Direct parsing of adaptive HLS streams ensures you download the absolute highest resolution available on Twitter&rsquo;s CDN.</p>
+        </div>
+        <div class="feature-item">
+          <h4>✨ Zero Watermarks</h4>
+          <p>Extracts pristine, untouched MP4 files with original frame rates and zero promotional watermarks or re-compression artifacts.</p>
+        </div>
+        <div class="feature-item">
+          <h4>📱 Native iOS &amp; Android</h4>
+          <p>Optimized for iPhone Safari to save directly to the Apple Photos Camera Roll without requiring third-party file manager apps.</p>
+        </div>
+        <div class="feature-item">
+          <h4>🎵 Twitter Spaces to MP3</h4>
+          <p>Extract audio streams from Twitter videos, podcasts, and Spaces in 320kbps / 192kbps / 128kbps crystal-clear MP3 format.</p>
+        </div>
+        <div class="feature-item">
+          <h4>🛡️ 100% Free &amp; Private</h4>
+          <p>No user accounts, no passwords, no logs, and no limits. Download as many videos as you want completely anonymously.</p>
+        </div>
+        <div class="feature-item">
+          <h4>🔄 Animated GIFs to MP4</h4>
+          <p>Twitter automatically encodes animated GIFs into video loops. TWT Saves downloads smooth MP4 files ready for WhatsApp &amp; Discord.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps Guide -->
+    <section>
+      <h2 class="section-title">How to Download in 4 Steps</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">Step 1</span>
+          <h4>Copy Tweet Link</h4>
+          <p>Find the video on Twitter or the X mobile app, tap the Share icon, and select &ldquo;Copy Link&rdquo;.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">Step 2</span>
+          <h4>Paste or Prefix</h4>
+          <p>Paste the URL above or add <code>twtsaves.com/</code> before the URL in your browser address bar.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">Step 3</span>
+          <h4>Choose Resolution</h4>
+          <p>Select your desired quality: 1080p Full HD, 720p HD, 480p SD, or extract pure MP3 audio.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">Step 4</span>
+          <h4>Save to Storage</h4>
+          <p>Tap download to instantly save the file directly to your phone&rsquo;s gallery or computer disk.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does the creator know if I download their video?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            No. Twitter (X) does not notify creators or account owners when a video is downloaded. All requests are completely anonymous.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I download videos from private or protected accounts?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            No. TWT Saves strictly respects Twitter&rsquo;s privacy and access controls. Only publicly viewable tweets can be extracted.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I save videos directly to my iPhone Camera Roll?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            On iOS Safari, after tapping download, Safari presents the native iOS Share Sheet. Simply tap &ldquo;Save Video&rdquo; to store the MP4 directly into your Apple Photos app. You can also use our official Siri Shortcut.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Why do Twitter GIFs download as MP4 files?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Twitter automatically converts all uploaded animated GIFs into looping MP4 video files to reduce bandwidth and provide smoother playback. TWT Saves downloads the original high-definition MP4 loop.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is TWT Saves free to use?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Yes! TWT Saves is 100% free with unlimited downloads. There are no subscriptions, paywalls, or hidden limitations.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a href="https://twtsaves.com" class="brand" target="_blank" rel="noopener">
+          <div class="brand-icon">T</div>
+          <div class="brand-text">
+            <span class="twt">TWT</span>
+            <span class="saves">Saves</span>
+          </div>
+        </a>
+
+        <div class="footer-links">
+          <a href="https://twtsaves.com" target="_blank" rel="noopener">Official Web App</a>
+          <a href="https://twtsaves.com/twitter-to-mp4" target="_blank" rel="noopener">Twitter to MP4</a>
+          <a href="https://twtsaves.com/twitter-to-mp3" target="_blank" rel="noopener">Twitter to MP3</a>
+          <a href="https://twtsaves.com/twitter-gif-downloader" target="_blank" rel="noopener">GIF Downloader</a>
+          <a href="https://twtsaves.com/shortcuts" target="_blank" rel="noopener">Siri Shortcut</a>
+          <a href="https://twtsaves.com/extension" target="_blank" rel="noopener">Chrome Extension</a>
+          <a href="https://twtsaves.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+          <a href="https://twtsaves.com/terms" target="_blank" rel="noopener">Terms</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 TWT Saves (twtsaves.com). Independent web utility. Not affiliated with or endorsed by X Corp. or Twitter.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
